@@ -1,0 +1,5 @@
+import quantPy as qp
+import ysq
+import wIndicators as wI
+
+qp.spPicker(wI.meanReversion)

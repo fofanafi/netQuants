@@ -1,0 +1,9 @@
+Here is a list of all packages to install for a complete environment:
+
+numpy
+scipy
+pandas
+matplotlib.pyplot (plotting similar to matlab)
+ipython (vastly imporoved interactive shell)
+emacs (best text editor, not vim)
+

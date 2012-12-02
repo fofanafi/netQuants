@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+	<script src="http://code.highcharts.com/stock/highstock.js" type="text/javascript"></script>
+	<script language="javascript" type="text/javascript">
+		$(document).ready(function() {	
+			$.getJSON('../stock/{{ symbol }}', function(data) {
+			// Create the chart
+			window.chart = new Highcharts.StockChart({
+			chart : {
+				renderTo : 'container'
+			},
+
+			rangeSelector : {
+				selected : 1
+			},
+
+			title : {
+				text : 'Stock Price'
+			},
+			
+			series : [{
+				name : '{{ symbol.upper() }}',
+				data : data,
+				tooltip: {
+					valueDecimals: 2
+				}
+					}]
+				});
+			});
+		});
+	</script>
+</header>
+
+<body>
+	
+	<div id="container">
+	</div>
+	
+</body>
+
+</html>
